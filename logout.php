@@ -1,3 +1,8 @@
+<?php
+session_start();
+header("refresh:2;url=login.php");
+?>
+
 <!doctype html>
 
 <html>
@@ -15,8 +20,8 @@
 <!--Edits end here-->
 
 <?php
-session_start();
-header( "refresh:2;url=login.php" );
+//session_start();
+//header( "refresh:2;url=login.php" );
 unset($_SESSION['username']);
 
 die("you have successfully logged out.");
