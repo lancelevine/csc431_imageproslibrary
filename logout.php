@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("refresh:2;url=login.php");
+//header("refresh:2;url=login.php");
 ?>
 
 <!doctype html>
@@ -17,11 +17,12 @@ header("refresh:2;url=login.php");
 </div>
 <div id ="phpContent">
 
+<meta http-equiv="refresh" content="5; url=login.php">
 <!--Edits end here-->
 
 <?php
 //session_start();
-//header( "refresh:2;url=login.php" );
+//header( "refresh:2; url=login.php" );
 unset($_SESSION['username']);
 
 die("you have successfully logged out.");
