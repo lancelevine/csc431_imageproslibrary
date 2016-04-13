@@ -17,6 +17,7 @@
 <?php
 session_start();
 unset($_SESSION['username']);
+header( "refresh:2;url=login.php" );
 
 die("you have successfully logged out.");
 
