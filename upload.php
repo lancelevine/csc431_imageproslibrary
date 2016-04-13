@@ -1,7 +1,10 @@
 <?php
 session_start();
 $username = $_SESSION['username'];
+$collection = $_SESSION['collection']; //the collection to upload to; carried over from index.php?
 $target_dir = "images/users/".$username."/1/";
+//$target_dir = "images/users/".$username."/".$collection."/";
+//^What it should look like when implemented.
 
 $i=1;
 
