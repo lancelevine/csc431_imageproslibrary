@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="style/colour.css" />
 <link rel="stylesheet" type="text/css" href="style/image_viewer.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="script.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -50,57 +51,18 @@ Select image to upload:
 <input type="file" name="fileToUpload" id="fileToUpload">
 <input type="submit" value="Upload Image" name="submit">
 </form>
-<script>
-$(document).ready(function(){
-                  
-                  var i = 1;
-                  var n = 0;
-                  var username = "<?php echo $_SESSION['username'] ?>";
-                  var fetch = setInterval(loadImages,200);
-                  var collectionNumber = 1;
-                  displayFirstImage();
-                  
-                  //mkdir("/images/users/test", 0700);
-                  //mkdir("/images/users/".test."/1", 0700);
-                  
-                  $(".thumbnail").click(function(){
-                                        $("#mainimg").attr("src",$(this).find("img").attr("src"));
-                                        $("#downloadbutton").attr("href", $(this).find("img").attr("src"));
-                                        });
-                  
-                  function displayFirstImage() {
-                  $("#mainimg").attr("src",$("#thumbs").find("img:first").attr("src"));
-                  $("#downloadbutton").attr("href",$("#thumbs").find("img:first").attr("src"));
-                  }
-                  
-                  function loadImages() {
-                  //alert(username);
-                  //while (i >= 0) {
-                  var url = "images/users/"+username+"/"+collectionNumber+"/"+i+".jpg";
-                  //if(i > 6)
-                  //alert(url);
-                  
-                  $.ajax({url: url,
-                         success: function(data){
-                         //alert('exists');
-                         //i++;
-                         $("#thumbs").find("img:eq("+n+")").attr("src", url);
-                         n++;
-                         },
-                         error: function(data){
-                         //alert('does not exist');
-                         clearInterval(fetch);
-                         },
-                         });
-                  //}
-                  i++;
-                  }
-                  });
-</script>
 <div id="gallery"> <img id="mainimg"/> <em id="thumbs"> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> <a class="thumbnail"><img alt="" /></a> </em> </div>
 <a value="download" id="downloadbutton" download><button>Download</button></a>
 </div>
 </div>
+
+<!--Testing Share-->
+<form action="share.php" method="post" enctype="multipart/form-data">
+Select user with which to share the active collection:
+<input type="user" name="recvUser" id="recvUser">
+<input type="submit" value="Share Collection" name="submit">
+</form>
+<!--/Testing Share-->
 
 <table>
 <form action="logout.php" method="POST">

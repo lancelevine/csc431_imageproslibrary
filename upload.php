@@ -1,13 +1,18 @@
 <?php
-session_start();
-$username = $_SESSION['username'];
-$target_dir = "images/users/".$username."/1/";
+    session_start();
+    $username = $_SESSION['username'];
+    $collection = $_SESSION['coll']; //the collection to upload to; carried over from index.php?
+    $target_dir = "images/users/".$username."/".$collection."/";
+
 
 $i=1;
 
 while(file_exists($target_dir.$i.".jpg") == 1){
   $i++;
 }
+    
+    header( "refresh:2; url=index.php" );
+
 
 $target_file = $target_dir . $i . ".jpg";// . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
