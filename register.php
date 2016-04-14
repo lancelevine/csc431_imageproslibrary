@@ -12,13 +12,14 @@
 <h1>Image Processing Library</h1>
 </div>
 <!--end here-->
+
 <head><title>login</title></head>
 <body>
-
 
 <div id ="phpContent">
 
 <?php
+session_start();
 $code=$_POST['code'];
 $account=$_POST['account'];
 //$code='ysi';
@@ -29,6 +30,8 @@ $valid=0;
 $username = "imagepr2_admin";
 $password = "1234";
 $hostname = "localhost"; 
+
+
 
 //connection to the database
 $dbhandle = mysql_connect($hostname, $username, $password) 
@@ -63,12 +66,14 @@ while ($row = mysql_fetch_array($names)) {
 	}
   
   mysql_query("INSERT INTO  `imagepr2_mainDB`.`Users` (`UID` ,`name` ,`password` ,`accountName`) VALUES (".$cIDs.",  'New User',  '".$code."','".$account."');")
-  or die("unsucess INSERT INTO  `imagepr2_mainDB`.`Users` (`UID` ,`name` ,`password` ,`accountName`) VALUES (".$cIDs.",  'New User',  '".$code."','".$account."');");;
+  or die("unsucess INSERT INTO  `imagepr2_mainDB`.`Users` (`UID` ,`name` ,`password` ,`accountName`) VALUES (".$cIDs.",  'New User',  '".$code."','".$account."');");
 
-//mkdir("/images/users/".$account, 0700);
-//mkdir("/images/users/".$account."/1", 0777);
+if(!mkdir('./images/users/'.$account.'/1', 0777, true)){
+die("Failed to create folder!");}
 
-die("register successfully");
+$_SESSION["username"] = $account;
+header( "refresh:2; url=index.php" );
+print "register successfully";
 ?>
 
 </div>
