@@ -47,7 +47,7 @@
 <div id="content">
 <h1>Collection One Photographs<span class="sub">[click on thumbnails to view]</span></h1>
 <form action="upload.php" method="post" enctype="multipart/form-data">
-Select image to upload:
+Select image to upload: <!--The user should also indicate the collection to upload to as well. Collection indicated with button or collection indicated by thumbnails on left?-->
 <input type="file" name="fileToUpload" id="fileToUpload">
 <input type="submit" value="Upload Image" name="submit">
 </form>

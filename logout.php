@@ -12,11 +12,13 @@
 </div>
 <div id ="phpContent">
 
+<meta http-equiv="refresh" content="5; url=login.php">
 <!--Edits end here-->
 
 <?php
 session_start();
 unset($_SESSION['username']);
+header( "refresh:2; url=login.php" );
 
 die("you have successfully logged out.");
 
