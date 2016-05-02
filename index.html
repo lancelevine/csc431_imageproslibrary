@@ -1,62 +1,62 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<!---->
-<META http-equiv="refresh" content="0;URL=index.php">
-
-<title>Image Processing Library</title>
-
-<link rel="stylesheet" type="text/css" href="style/style.css" />
-<link rel="stylesheet" type="text/css" href="style/colour.css" />
-<link rel="stylesheet" type="text/css" href="style/image_viewer.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-</head>
-<body>
-<div id="logo">
-  <h1>Image Processing Library</h1>
-  <div id="links"></div>
-</div>
-<div id="menu">
-  <ul>
-    <!--<li><a class="selected" href="#">Home</a></li>
-    <li><a href="about.php">Search</a></li>
-    <li><a href="contact.php">Uploaded Images</a></li>-->
-  </ul>
-  <div id="colours"></div>
-</div>
-<div id="site_content">
-  <div id="side_menu">
-    <div class="side_menu_item"> <a class="selected" href="#"><img src="style/series_one.jpg" alt="" width="142" height="50" /></a> <span class="info">Collection One</span> </div>
-    <div class="side_menu_item"> <a href="#"><img src="style/series_two.jpg" alt="" width="142" height="50" /></a> <span class="info">Collection Two</span> </div>
-    <div class="side_menu_item"> <a href="#"><img src="style/series_three.jpg" alt="" width="142" height="50" /></a> <span class="info">Collection Three</span> </div>
-    <div class="side_menu_item"> <a href="#"><img src="style/series_four.jpg" alt="" width="142" height="50" /></a> <span class="info">Collection Four</span> </div>
-    <div class="side_menu_item"> <a href="#"><img src="style/series_five.jpg" alt="" width="142" height="50" /></a> <span class="info">Collection Five</span> </div>
-  </div>
-  <div id="content">
-    <h1>Collection One Photographs<span class="sub">[click on thumbnails to view]</span></h1>
-    <script>
-    $(document).ready(function(){
-    
-    	 
-    
-    	$(".thumbnail").click(function(){
-    	        	/*$("#mainimg").attr("src",$(this).find("img").attr("src"));*/
-
-        	$.ajax({url: 'http://imageproslibrary.x10host.com/index.php',
-  success: function(data){
-    alert('exists');
-  },
-  error: function(data){
-    alert('does not exist');
-  },
-});
-    	});
-    	
-    	
-    });
-    </script>
-    <div id="gallery"> <img id="mainimg" src="images/series_one/drone_2.jpg"/> <em id="thumbs"> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="./images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> </em> </div>
-  </div>
-</div>
-</body>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <!---->
+        <META http-equiv="refresh" content="0;URL=index.php">
+            
+            <title>Image Processing Library</title>
+            
+            <link rel="stylesheet" type="text/css" href="style/style.css" />
+            <link rel="stylesheet" type="text/css" href="style/colour.css" />
+            <link rel="stylesheet" type="text/css" href="style/image_viewer.css" />
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="logo">
+            <!--<h1>Image Processing Library</h1>-->
+            <div id="links"></div>
+        </div>
+        <div id="menu">
+            <ul>
+                <!--<li><a class="selected" href="#">Home</a></li>
+                 <li><a href="about.php">Search</a></li>
+                 <li><a href="contact.php">Uploaded Images</a></li>-->
+            </ul>
+            <div id="colours"></div>
+        </div>
+        <div id="site_content">
+            <div id="side_menu">
+                <div class="side_menu_item"> <a class="selected" href="#"><img src="style/series_one.jpg" alt="" width="142" height="50" /></a> <span class="info">Collection One</span> </div>
+                <div class="side_menu_item"> <a href="#"><img src="style/series_two.jpg" alt="" width="142" height="50" /></a> <span class="info">Collection Two</span> </div>
+                <div class="side_menu_item"> <a href="#"><img src="style/series_three.jpg" alt="" width="142" height="50" /></a> <span class="info">Collection Three</span> </div>
+                <div class="side_menu_item"> <a href="#"><img src="style/series_four.jpg" alt="" width="142" height="50" /></a> <span class="info">Collection Four</span> </div>
+                <div class="side_menu_item"> <a href="#"><img src="style/series_five.jpg" alt="" width="142" height="50" /></a> <span class="info">Collection Five</span> </div>
+            </div>
+            <div id="content">
+                <h1>Collection One Photographs<span class="sub">[click on thumbnails to view]</span></h1>
+                <script>
+                    $(document).ready(function(){
+                                      
+                                      
+                                      
+                                      $(".thumbnail").click(function(){
+                                                            /*$("#mainimg").attr("src",$(this).find("img").attr("src"));*/
+                                                            
+                                                            $.ajax({url: 'http://imageproslibrary.x10host.com/index.php',
+                                                                   success: function(data){
+                                                                   alert('exists');
+                                                                   },
+                                                                   error: function(data){
+                                                                   alert('does not exist');
+                                                                   },
+                                                                   });
+                                                            });
+                                      
+                                      
+                                      });
+                    </script>
+                <div id="gallery"> <img id="mainimg" src="images/series_one/drone_2.jpg"/> <em id="thumbs"> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="./images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_1.jpg" alt="" /></a> <a class="thumbnail"><img src="images/series_one/drone_2.jpg" alt="" /></a> </em> </div>
+            </div>
+        </div>
+    </body>
 </html>
